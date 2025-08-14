@@ -1,10 +1,22 @@
 <script setup>
-import { onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import Swiper from 'swiper'
 import 'swiper/swiper-bundle.css'
 
+import { TresCanvas } from '@tresjs/core'
+import { OrbitControls } from '@tresjs/cientos'
+import Moon from './components/Moon.vue'
+
+const isMobile = ref(window.innerWidth <= 767)
+
+function handleResize() {
+  isMobile.value = window.innerWidth <= 767
+}
+
 onMounted(() => {
   import('../public/assets/js/main.js')
+
+  window.addEventListener('resize', handleResize)
 
   new Swiper('.testimonial-slider', {
     loop: true,
@@ -36,6 +48,10 @@ onMounted(() => {
     }
   })
 })
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize)
+})
 </script>
 
 <template>
@@ -43,9 +59,7 @@ onMounted(() => {
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Strategy</h1>
+        <img src="../public/assets/img/logo.png" alt="">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -112,23 +126,22 @@ onMounted(() => {
               </div>
             </div>
           </div>
-
           <div class="col-lg-5" data-aos="zoom-out">
             <div class="visual-content">
               <div class="fluid-shape">
-                <img src="../public/assets/img/abstract/abstract-1.webp" alt="Abstract Fluid Shape" class="fluid-img">
-              </div>
-
-              <div class="stats-card">
-                <div class="stats-number">
-                  <h2>5K</h2>
-                </div>
-                <div class="stats-label">
-                  <p>Successful Campaigns</p>
-                </div>
-                <div class="stats-arrow">
-                  <a href="#portfolio"><i class="bi bi-arrow-up-right"></i></a>
-                </div>
+                <!-- <img src="../public/assets/img/abstract/abstract-1.webp" alt="Abstract Fluid Shape" class="fluid-img"> -->
+                  <TresCanvas>
+                    <TresPerspectiveCamera :position="[0, 60, 128]" />
+                    <OrbitControls :enableZoom="false" :enableRotate="!isMobile" :enablePan="!isMobile" />
+                    <Suspense>
+                        <Moon />
+                    </Suspense>
+                    <TresDirectionalLight
+                      :intensity="2"
+                      :position="[3, 3, 3]"
+                    />
+                    <TresAmbientLight :intensity="1" />
+                  </TresCanvas>
               </div>
             </div>
           </div>

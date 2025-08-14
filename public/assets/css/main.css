@@ -776,7 +776,17 @@ section,
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 100px 0;
+  padding: 150px 0 12px 0;
+}
+
+canvas[data-tres] {
+  min-height: 400px !important;
+}
+
+@media (max-width: 767px) {
+  canvas[data-tres] {
+    touch-action: pan-y !important;
+  }
 }
 
 .hero::after {
@@ -786,7 +796,9 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 10px);
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url('../img/stars-bg.jpg');
+  background-size: cover;
+  background-position: center;
   z-index: 1;
 }
 
@@ -926,8 +938,13 @@ section,
 
 .hero .fluid-shape {
   position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin: 0 auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
 }
 
 .hero .fluid-shape .fluid-img {
