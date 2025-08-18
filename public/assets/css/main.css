@@ -264,7 +264,7 @@ h6 {
     display: none;
     list-style: none;
     position: absolute;
-    inset: 60px 20px 20px 20px;
+    inset: 10px;
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
@@ -388,13 +388,15 @@ h6 {
 }
 
 .footer .footer-about .logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 1;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .footer .footer-about .logo img {
   max-height: 40px;
-  margin-right: 6px;
 }
 
 .footer .footer-about .logo span {
@@ -484,11 +486,6 @@ h6 {
 
 .footer .copyright p {
   margin-bottom: 0;
-}
-
-.footer .credits {
-  margin-top: 6px;
-  font-size: 13px;
 }
 
 /*--------------------------------------------------------------
@@ -1234,6 +1231,10 @@ canvas[data-tres] {
   margin-bottom: 30px;
   border: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
   transition: all 0.3s ease;
+}
+
+.services .service-card-desktop {
+  height: 440px;
 }
 
 .services .service-card .service-icon {

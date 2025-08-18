@@ -1,7 +1,5 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import Swiper from 'swiper'
-import 'swiper/swiper-bundle.css'
 
 import { TresCanvas } from '@tresjs/core'
 import { OrbitControls } from '@tresjs/cientos'
@@ -17,36 +15,6 @@ onMounted(() => {
   import('../public/assets/js/main.js')
 
   window.addEventListener('resize', handleResize)
-
-  new Swiper('.testimonial-slider', {
-    loop: true,
-    speed: 800,
-    autoplay: { delay: 5000 },
-    slidesPerView: 1,
-    spaceBetween: 30,
-    navigation: {
-      nextEl: '.slider-next',
-      prevEl: '.slider-prev'
-    },
-    breakpoints: {
-      768: { slidesPerView: 2 }
-    }
-  })
-
-  new Swiper('.testimonials-slider', {
-    loop: true,
-    speed: 600,
-    autoplay: { delay: 5000 },
-    slidesPerView: 1,
-    spaceBetween: 30,
-    navigation: {
-      nextEl: '.slider-next',
-      prevEl: '.slider-prev'
-    },
-    breakpoints: {
-      768: { slidesPerView: 2 }
-    }
-  })
 })
 
 onUnmounted(() => {
@@ -58,18 +26,16 @@ onUnmounted(() => {
     <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="d-flex align-items-center me-auto me-xl-0">
+      <a href="#hero" class="d-flex align-items-center me-auto me-xl-0">
         <img src="../public/assets/img/logo.png" alt="">
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#contact">Contato</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -135,8 +101,8 @@ onUnmounted(() => {
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <div><span>Learn More</span> <span class="description-title">About Us</span></div>
+        <h2>Sobre</h2>
+        <div><span>Saiba Mais</span> <span class="description-title">Sobre Nós</span></div>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -145,37 +111,33 @@ onUnmounted(() => {
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div class="about-image position-relative">
               <img src="../public/assets/img/about/about-portrait-1.webp" class="img-fluid rounded-4 shadow-sm" alt="About Image" loading="lazy">
-              <div class="experience-badge">
-                <span class="years">20+</span>
-                <span class="text">Years of Expertise</span>
-              </div>
             </div>
           </div>
 
           <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content">
-              <h2>Elevating Business Performance Through Innovation</h2>
-              <p class="lead">We focus on crafting bespoke strategies that navigate complexity and deliver tangible results for our clients.</p>
-              <p>Through a blend of sophisticated analytics and creative problem-solving, we empower organizations to thrive in rapidly evolving markets.</p>
+              <h2>Elevando a Performance do seu Negócio através da Inovação</h2>
+              <p class="lead">Nosso foco é traçar estratégias personalizadas que navegam pela complexidade e entregam resultados tangíveis para nossos clientes.</p>
+              <p>Através de uma combinação de análises sofisticadas e resolução criativa de problemas, ajudamos organizações a prosperar em um ambiente de negócios em constante mudança.</p>
 
               <div class="row g-4 mt-3">
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="400">
                   <div class="feature-item">
                     <i class="bi bi-check-circle-fill"></i>
-                    <h5>Dedicated Team Support</h5>
-                    <p>Our highly skilled professionals are committed to providing personalized service and impactful solutions on every engagement.</p>
+                    <h5>Dedicação ao Cliente</h5>
+                    <p>Estamos altamente comprometidos em compreender a necessidade dos nossos clientes e fornecer um serviço personalizado que atenda à real necessidade do seu negócio.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="450">
                   <div class="feature-item">
                     <i class="bi bi-lightbulb-fill"></i>
-                    <h5>Forward-Thinking Approach</h5>
-                    <p>We embrace innovative methodologies to develop unique strategies that drive lasting success.</p>
+                    <h5>Abordagem Inovadora</h5>
+                    <p>Adotamos metodologias inovadoras para desenvolver softwares únicos que impulsionam o sucesso da sua empresa.</p>
                   </div>
                 </div>
               </div>
 
-              <a href="#" class="btn btn-primary mt-4">Explore Our Services</a>
+              <a href="#" class="btn btn-primary mt-4">Explore nossos serviços</a>
             </div>
           </div>
         </div>
@@ -187,8 +149,8 @@ onUnmounted(() => {
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <div><span>Check Our</span> <span class="description-title">Services</span></div>
+        <h2>Serviços</h2>
+        <div><span>Confira os nossos</span> <span class="description-title">Serviços</span></div>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -198,20 +160,9 @@ onUnmounted(() => {
             <div class="col-lg-8 col-md-12">
               <div class="service-intro">
                 <h2 class="service-heading">
-                  <div>Innovative business</div>
-                  <div><span>performance solutions</span></div>
+                  <div>Inovando Negócios</div>
+                  <div><span>através do desenvolvimento de softwares</span></div>
                 </h2>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-              <div class="service-summary">
-                <p>
-                  We integrate forward-thinking strategies, creative approaches, and state-of-the-art technologies to deliver exceptional customer experiences that drive growth and engage target markets.
-                </p>
-                <a href="services.html" class="service-btn">
-                  View All Services
-                  <i class="bi bi-arrow-right"></i>
-                </a>
               </div>
             </div>
           </div>
@@ -219,110 +170,80 @@ onUnmounted(() => {
 
         <div class="row justify-content-center">
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card position-relative z-1">
+            <div :class="'service-card position-relative z-1' + (!isMobile ? ' service-card-desktop' : ' ')">
               <div class="service-icon">
                 <i class="bi bi-palette"></i>
               </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
               <h3>
-                <a href="service-details.html">
-                  Creative <span>branding</span>
-                </a>
+                  Desenvolvimento de <span>Landing Pages</span>
               </h3>
               <p>
-                Nulla facilisi. Maecenas eget magna neque. Suspendisse potenti. Curabitur eleifend nisi non magna vulputate, vel condimentum libero tempus. Proin consectetur feugiat diam.
+                Quer lançar um produto novo? Nós criamos landing pages otimizadas para conversão, com design atraente e conteúdo persuasivo que capturam a atenção do seu público-alvo.
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card position-relative z-1">
+            <div :class="'service-card position-relative z-1' + (!isMobile ? ' service-card-desktop' : ' ')">
               <div class="service-icon">
                 <i class="bi bi-gem"></i>
               </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
               <h3>
-                <a href="service-details.html">
-                  Design <span>systems</span>
-                </a>
+                  Criação de <span>Websites</span>
               </h3>
               <p>
-                Praesent euismod varius tellus, vel bibendum nunc interdum at. Donec vehicula diam vel metus venenatis convallis. Aliquam erat volutpat. Etiam viverra magna sit amet.
+                Sua empresa precisa de uma identidade na Internet? Nós criamos websites personalizados que não apenas atraem visitantes, mas também proporcionam uma experiência de usuário excepcional. Com designs responsivos e otimização para SEO, garantimos que seu site se destaque.
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card position-relative z-1">
+            <div :class="'service-card position-relative z-1' + (!isMobile ? ' service-card-desktop' : ' ')">
               <div class="service-icon">
                 <i class="bi bi-megaphone"></i>
               </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
               <h3>
-                <a href="service-details.html">
-                  Marketing <span>strategies</span>
-                </a>
+                  Desenvolvimento de <span>Sistemas Completos</span>
               </h3>
               <p>
-                Vivamus tempor velit id magna dictum, sed fermentum nisi faucibus. Integer nec pretium sapien. Fusce tincidunt ligula et purus consequat, ac pellentesque nulla eleifend.
+                Um novo serviço para os seus clientes? Um software para operação interna? Nós desenvolvemos sistemas completos sob medida para atender às necessidades específicas do seu negócio. Desde a análise de requisitos até a implementação e manutenção, garantimos uma solução robusta e escalável.
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card position-relative z-1">
+            <div :class="'service-card position-relative z-1' + (!isMobile ? ' service-card-desktop' : ' ')">
               <div class="service-icon">
                 <i class="bi bi-code-slash"></i>
               </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
               <h3>
-                <a href="service-details.html">
-                  Digital <span>platforms</span>
-                </a>
+                  Criação de <span>Aplicativos Mobile</span>
               </h3>
               <p>
-                Cras fermentum odio eu feugiat malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et accumsan cursus. Morbi placerat nulla vel nunc viverra accumsan.
+                Quer as informações da sua empresa na palma da mão? Nós desenvolvemos aplicativos personalizados que atendem às necessidades específicas do seu negócio. Com foco na experiência do usuário e nas melhores práticas de desenvolvimento, garantimos que seu aplicativo se destaque no mercado.
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card position-relative z-1">
+            <div :class="'service-card position-relative z-1' + (!isMobile ? ' service-card-desktop' : ' ')">
               <div class="service-icon">
                 <i class="bi bi-graph-up"></i>
               </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
               <h3>
-                <a href="service-details.html">
-                  Growth <span>acceleration</span>
-                </a>
+                  Otimização de Processos através de <span>Softwares</span>
               </h3>
               <p>
-                Aenean vel augue vel nisi bibendum posuere. Phasellus in lacus quis urna sodales dignissim. Duis aliquam libero eget risus facilisis. Quisque eget libero vel nisl fringilla.
+                Sua empresa necessita de uma solução para otimizar os processos? Nós ajudamos empresas por meio de soluções de software personalizadas. Com uma abordagem centrada no usuário, garantimos que nossas ferramentas atendam às suas necessidades específicas e melhorem a eficiência operacional.
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card position-relative z-1">
+            <div :class="'service-card position-relative z-1' + (!isMobile ? ' service-card-desktop' : ' ')">
               <div class="service-icon">
                 <i class="bi bi-camera-video"></i>
               </div>
-              <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
               <h3>
-                <a href="service-details.html">
-                  Media <span>solutions</span>
-                </a>
+                  Estratégias de <span>Marketing Digital</span>
               </h3>
               <p>
-                Etiam efficitur lacus in diam finibus, nec ultrices est sagittis. Maecenas elementum magna sed risus faucibus, nec commodo purus facilisis. Vestibulum accumsan magna.
+                Precisa de ajuda para alavancar suas vendas? Nós ajudamos empresas a acelerar seu crescimento por meio de estratégias de marketing digital eficazes. Desde a otimização de conversões até campanhas de mídia paga, trabalhamos para maximizar seu ROI.
               </p>
             </div>
           </div>
@@ -337,8 +258,8 @@ onUnmounted(() => {
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Steps</h2>
-        <div><span>How we</span> <span class="description-title">Work</span></div>
+        <h2>Passo-a-passo</h2>
+        <div><span>Como nós</span> <span class="description-title">Trabalhamos</span></div>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -351,9 +272,9 @@ onUnmounted(() => {
                 <i class="bi bi-lightbulb"></i>
               </div>
               <div class="step-info">
-                <span class="step-number">Step 01</span>
-                <h3>Initial Consultation</h3>
-                <p>Conducting thorough discovery sessions to understand your business requirements and objectives. Our expert team analyzes your needs to create a customized approach.</p>
+                <span class="step-number">Passo 1</span>
+                <h3>Consultoria Inicial</h3>
+                <p>Realizamos sessões de descoberta para entender os requisitos e objetivos do seu negócio. Nossa equipe de especialistas analisa suas necessidades para criar uma abordagem personalizada.</p>
               </div>
             </div>
           </div><!-- End Step Item -->
@@ -364,9 +285,9 @@ onUnmounted(() => {
                 <i class="bi bi-gear"></i>
               </div>
               <div class="step-info">
-                <span class="step-number">Step 02</span>
-                <h3>Planning &amp; Strategy</h3>
-                <p>Developing comprehensive strategies and detailed project plans based on the initial consultation. We create actionable roadmaps with clear milestones and deliverables.</p>
+                <span class="step-number">Passo 2</span>
+                <h3>Planejamento &amp; Estratégia</h3>
+                <p>Desenvolvemos estratégias abrangentes e planos de projeto detalhados com base na consultoria inicial. Criamos roteiros acionáveis com marcos e entregas claras.</p>
               </div>
             </div>
           </div><!-- End Step Item -->
@@ -377,9 +298,9 @@ onUnmounted(() => {
                 <i class="bi bi-bar-chart"></i>
               </div>
               <div class="step-info">
-                <span class="step-number">Step 03</span>
-                <h3>Development Phase</h3>
-                <p>Executing the planned strategies with precision and agility. Our team implements solutions while maintaining constant communication and progress updates.</p>
+                <span class="step-number">Passo 3</span>
+                <h3>Fase de Desenvolvimento</h3>
+                <p>Executamos as estratégias planejadas com precisão e agilidade. Nossa equipe implementa soluções enquanto mantém comunicação constante e atualizações de progresso.</p>
               </div>
             </div>
           </div><!-- End Step Item -->
@@ -390,9 +311,9 @@ onUnmounted(() => {
                 <i class="bi bi-check2-circle"></i>
               </div>
               <div class="step-info">
-                <span class="step-number">Step 04</span>
-                <h3>Launch &amp; Support</h3>
-                <p>Ensuring smooth deployment and providing ongoing support for implemented solutions. We monitor performance and make necessary adjustments for optimal results.</p>
+                <span class="step-number">Passo 4</span>
+                <h3>Implantação &amp; Suporte</h3>
+                <p>Garantimos uma implantação suave e fornecemos suporte contínuo para as soluções implementadas. Monitoramos o desempenho e fazemos os ajustes necessários para resultados ideais.</p>
               </div>
             </div>
           </div><!-- End Step Item -->
@@ -400,360 +321,13 @@ onUnmounted(() => {
       </div>
     </section><!-- /Steps Section -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <div><span>Check Our</span> <span class="description-title">Portfolio</span></div>
-      </div><!-- End Section Title -->
-
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
-            <li data-filter="*" class="filter-active">
-              <i class="bi bi-grid-3x3"></i> All Projects
-            </li>
-            <li data-filter=".filter-ui">
-              <i class="bi bi-phone"></i> UI/UX
-            </li>
-            <li data-filter=".filter-development">
-              <i class="bi bi-code-slash"></i> Development
-            </li>
-            <li data-filter=".filter-photography">
-              <i class="bi bi-camera"></i> Photography
-            </li>
-            <li data-filter=".filter-marketing">
-              <i class="bi bi-graph-up"></i> Marketing
-            </li>
-          </ul>
-
-          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="../public/assets/img/portfolio/portfolio-1.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">UI/UX Design</div>
-                      <h3 class="entry-title">Mobile Banking App</h3>
-                      <div class="entry-links">
-                        <a href="../public/assets/img/portfolio/portfolio-1.webp" class="glightbox" data-gallery="portfolio-gallery-ui" data-glightbox="title: Mobile Banking App; description: Praesent commodo cursus magna, vel scelerisque nisl consectetur.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="../public/assets/img/portfolio/portfolio-10.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Development</div>
-                      <h3 class="entry-title">E-Learning Platform</h3>
-                      <div class="entry-links">
-                        <a href="../public/assets/img/portfolio/portfolio-10.webp" class="glightbox" data-gallery="portfolio-gallery-development" data-glightbox="title: E-Learning Platform; description: Nulla vitae elit libero, a pharetra augue mollis interdum.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="../public/assets/img/portfolio/portfolio-7.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Photography</div>
-                      <h3 class="entry-title">Urban Architecture</h3>
-                      <div class="entry-links">
-                        <a href="../public/assets/img/portfolio/portfolio-7.webp" class="glightbox" data-gallery="portfolio-gallery-photography" data-glightbox="title: Urban Architecture; description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-marketing">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="../public/assets/img/portfolio/portfolio-4.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Marketing</div>
-                      <h3 class="entry-title">Social Media Campaign</h3>
-                      <div class="entry-links">
-                        <a href="../public/assets/img/portfolio/portfolio-4.webp" class="glightbox" data-gallery="portfolio-gallery-marketing" data-glightbox="title: Social Media Campaign; description: Quis autem vel eum iure reprehenderit qui in ea voluptate.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="../public/assets/img/portfolio/portfolio-2.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">UI/UX Design</div>
-                      <h3 class="entry-title">Smart Home Interface</h3>
-                      <div class="entry-links">
-                        <a href="../public/assets/img/portfolio/portfolio-2.webp" class="glightbox" data-gallery="portfolio-gallery-ui" data-glightbox="title: Smart Home Interface; description: At vero eos et accusamus et iusto odio dignissimos ducimus.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="../public/assets/img/portfolio/portfolio-11.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Development</div>
-                      <h3 class="entry-title">Cloud Management System</h3>
-                      <div class="entry-links">
-                        <a href="../public/assets/img/portfolio/portfolio-11.webp" class="glightbox" data-gallery="portfolio-gallery-development" data-glightbox="title: Cloud Management System; description: Temporibus autem quibusdam et aut officiis debitis.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="../public/assets/img/portfolio/portfolio-8.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Photography</div>
-                      <h3 class="entry-title">Nature Collection</h3>
-                      <div class="entry-links">
-                        <a href="../public/assets/img/portfolio/portfolio-8.webp" class="glightbox" data-gallery="portfolio-gallery-photography" data-glightbox="title: Nature Collection; description: Integer posuere erat a ante venenatis dapibus posuere velit aliquet.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-marketing">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="../public/assets/img/portfolio/portfolio-5.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Marketing</div>
-                      <h3 class="entry-title">Brand Strategy</h3>
-                      <div class="entry-links">
-                        <a href="../public/assets/img/portfolio/portfolio-5.webp" class="glightbox" data-gallery="portfolio-gallery-marketing" data-glightbox="title: Brand Strategy; description: Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!-- Team Section -->
-    <section id="team" class="team section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Team</h2>
-        <div><span>Check Our</span> <span class="description-title">Team</span></div>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member d-flex">
-              <div class="member-img">
-                <img src="../public/assets/img/person/person-m-7.webp" class="img-fluid" alt="" loading="lazy">
-              </div>
-              <div class="member-info flex-grow-1">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <p>Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum distinctio dire flow</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                  <a href=""><i class="bi bi-youtube"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member d-flex">
-              <div class="member-img">
-                <img src="../public/assets/img/person/person-f-8.webp" class="img-fluid" alt="" loading="lazy">
-              </div>
-              <div class="member-info flex-grow-1">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>Labore ipsam sit consequatur exercitationem rerum laboriosam laudantium aut quod dolores exercitationem ut</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                  <a href=""><i class="bi bi-youtube"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member d-flex">
-              <div class="member-img">
-                <img src="../public/assets/img/person/person-m-6.webp" class="img-fluid" alt="" loading="lazy">
-              </div>
-              <div class="member-info flex-grow-1">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>Illum minima ea autem doloremque ipsum quidem quas aspernatur modi ut praesentium vel tque sed facilis at qui</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                  <a href=""><i class="bi bi-youtube"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member d-flex">
-              <div class="member-img">
-                <img src="../public/assets/img/person/person-f-4.webp" class="img-fluid" alt="" loading="lazy">
-              </div>
-              <div class="member-info flex-grow-1">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <p>Magni voluptatem accusamus assumenda cum nisi aut qui dolorem voluptate sed et veniam quasi quam consectetur</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                  <a href=""><i class="bi bi-youtube"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="team-member d-flex">
-              <div class="member-img">
-                <img src="../public/assets/img/person/person-m-12.webp" class="img-fluid" alt="" loading="lazy">
-              </div>
-              <div class="member-info flex-grow-1">
-                <h4>Brian Doe</h4>
-                <span>Marketing</span>
-                <p>Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                  <a href=""><i class="bi bi-youtube"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="team-member d-flex">
-              <div class="member-img">
-                <img src="../public/assets/img/person/person-f-9.webp" class="img-fluid" alt="" loading="lazy">
-              </div>
-              <div class="member-info flex-grow-1">
-                <h4>Josepha Palas</h4>
-                <span>Operation</span>
-                <p>Sint sint eveniet explicabo amet consequatur nesciunt error enim rerum earum et omnis fugit eligendi cupiditate vel</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                  <a href=""><i class="bi bi-youtube"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-        </div>
-      </div>
-    </section><!-- /Team Section -->
-
     <!-- Contact Section -->
     <section id="contact" class="contact section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <div><span>Let's</span> <span class="description-title">Connect</span></div>
+        <h2>Contatos</h2>
+        <div><span>Vamos</span> <span class="description-title">Conectar</span></div>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -807,62 +381,41 @@ onUnmounted(() => {
 
     <div class="container footer-top">
       <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Strategy</span>
+        <div class="col-lg-5 col-md-12 footer-about flex-grow-1 d-flex flex-column text-center">
+          <a href="#hero" class="logo">
+            <img src="../public/assets/img/logo.png" alt="">
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+          <p>Inovação que impulsiona resultados.</p>
+          <div class="social-links d-flex justify-content-center align-items-center">
+            <a href="https://wa.me/5534999514231?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20CodeLuni" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/codeluni/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
           </div>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
+          <h4>Links Úteis</h4>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#about">Sobre nós</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#contact">Contato</a></li>
+            <!-- <li><a href="#">Termos de serviço</a></li> -->
+            <!-- <li><a href="#">Política de privacidade</a></li> -->
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
+          <h4>Contate-nos</h4>
           <p>A108 Adam Street</p>
           <p>New York, NY 535022</p>
           <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+          <p class="mt-4"><strong>Email:</strong> <span>info@example.com</span></p>
         </div>
-
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Strategy</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">CodeLuni</strong> <span>All Rights Reserved</span></p>
     </div>
 
   </footer>
